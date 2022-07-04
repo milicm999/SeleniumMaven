@@ -32,15 +32,6 @@ public class SeleniumDemo {
 
 
         //Testing LogIn
-//        Select username= new Select(driver.findElement(By.name("User Name")));
-//        Select password= new Select(driver.findElement(By.name("Password")));
-
-//        username.selectByVisibleText("text");
-//        password.selectByVisibleText("text");
-
-//        driver.findElement(By.name("userName")).sendKeys(Keys.COMMAND + "maja99");
-//        driver.findElement(By.name("password")).sendKeys(Keys.COMMAND + "maja99");
-//        driver.findElement(By.name("submit")).click();
         WebElement username=driver.findElement(By.name("userName"));
         wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.name("userName")));
         username.sendKeys(Keys.COMMAND + "maja99");

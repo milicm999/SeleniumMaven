@@ -5,11 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="72c41757-5023-4bbe-acce-022cfa3b8a07" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/day1/Testing.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/day1/setUpTestEnvironment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/day1/SeleniumDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/day1/SeleniumDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/day1/Testing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/day1/Testing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/day1/setUpTestEnvironment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/day1/setUpTestEnvironment.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,9 +71,47 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Testing.testLogInWithNoInfo" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="SeleniumMaven" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="day1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="day1" />
+      <option name="MAIN_CLASS_NAME" value="day1.Testing" />
+      <option name="METHOD_NAME" value="testLogInWithNoInfo" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Testing.testRegistrationWithValidInfo" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="SeleniumMaven" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="day1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="day1" />
+      <option name="MAIN_CLASS_NAME" value="day1.Testing" />
+      <option name="METHOD_NAME" value="testRegistrationWithValidInfo" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.Testing" />
+        <item itemvalue="TestNG.Testing.testLogInWithNoInfo" />
+        <item itemvalue="TestNG.Testing.testRegistrationWithValidInfo" />
         <item itemvalue="Application.SeleniumDemo" />
       </list>
     </recent_temporary>

@@ -1,10 +1,14 @@
 package day1;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -14,18 +18,26 @@ import java.time.Duration;
 public class setUpTestEnvironment {
 
     private WebDriver driver;
-    private ChromeOptions options;
+    private FirefoxOptions options;
     private DesiredCapabilities capabilities;
     private WebDriverWait wait1;
 
+    private JavascriptExecutor js;
+
     public setUpTestEnvironment()
     {
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\milicm\\OneDrive - Comtrade Group\\Desktop\\QA assignment_Marija_Milic\\chromedriver.exe");
-        options=new ChromeOptions();
-        options.setExperimentalOption("excludeSwitches", "disable-popup-blocking");
-        capabilities=new DesiredCapabilities();
-        capabilities.setCapability(ChromeOptions.CAPABILITY, options);
-        driver=new ChromeDriver();
+        System.setProperty("webdriver.chrome.driver", "C:\\Users\\milicm\\OneDrive - Comtrade Group\\Desktop\\QA assignment_Marija_Milic\\geckodriver.exe");
+        FirefoxProfile profile = new FirefoxProfile();
+//      options=new ChromeOptions();
+        options = new FirefoxOptions();
+        options.setProfile(profile);
+//        options.setExperimentalOption("excludeSwitches", "disable-popup-blocking");
+//        capabilities=new DesiredCapabilities();
+//        capabilities.setCapability(FirefoxOptions.FIREFOX_OPTIONS, options);
+
+
+        driver=new FirefoxDriver(options);
+        js=(JavascriptExecutor)driver;
         wait1 = new WebDriverWait(driver, Duration.ofSeconds(30));
         driver.manage().window().maximize();
         driver.get("https://demo.guru99.com/test/newtours/");
@@ -39,11 +51,11 @@ public class setUpTestEnvironment {
         this.driver = driver;
     }
 
-    public ChromeOptions getOptions() {
+    public FirefoxOptions getOptions() {
         return options;
     }
 
-    public void setOptions(ChromeOptions options) {
+    public void setOptions(FirefoxOptions options) {
         this.options = options;
     }
 
@@ -66,5 +78,13 @@ public class setUpTestEnvironment {
     {
         WebElement element=driver.findElement(By.name(nameOfElement));
         return element;
+    }
+
+    public JavascriptExecutor getJs() {
+        return js;
+    }
+
+    public void setJs(JavascriptExecutor js) {
+        this.js = js;
     }
 }

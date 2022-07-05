@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="72c41757-5023-4bbe-acce-022cfa3b8a07" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/day1/SeleniumDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/day1/SeleniumDemo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/day1/Testing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/day1/Testing.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/day1/setUpTestEnvironment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/day1/setUpTestEnvironment.java" afterDir="false" />
     </list>
@@ -40,7 +39,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="TestNG.Testing">
+  <component name="RunManager" selected="TestNG.Testing.testDestinationHyperlink">
     <configuration name="SeleniumDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="day1.SeleniumDemo" />
       <module name="SeleniumMaven" />
@@ -65,6 +64,24 @@
       <option name="PACKAGE_NAME" value="day1" />
       <option name="MAIN_CLASS_NAME" value="day1.Testing" />
       <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Testing.testDestinationHyperlink" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="SeleniumMaven" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="day1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="day1" />
+      <option name="MAIN_CLASS_NAME" value="day1.Testing" />
+      <option name="METHOD_NAME" value="testDestinationHyperlink" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -109,6 +126,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.Testing.testDestinationHyperlink" />
         <item itemvalue="TestNG.Testing" />
         <item itemvalue="TestNG.Testing.testLogInWithNoInfo" />
         <item itemvalue="TestNG.Testing.testRegistrationWithValidInfo" />

@@ -146,4 +146,76 @@ public class Testing {
         driver.quit();
 
     }
+    @Test
+    public void testTourTips()
+    {
+        setUpTestEnvironment test4=new setUpTestEnvironment();
+        WebDriver driver=test4.getDriver();
+        WebDriverWait wait=test4.getWait1();
+        JavascriptExecutor js= test4.getJs();
+
+        //login with registered user
+        WebElement username=test4.findElement("userName");
+        wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.name("userName")));
+        username.sendKeys(Keys.COMMAND + "maja99");
+        WebElement password= driver.findElement(By.name("password"));
+        wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.name("password")));
+        password.sendKeys(Keys.COMMAND + "maja99");
+        WebElement submit= driver.findElement(By.name("submit"));
+        wait.until(ExpectedConditions.elementToBeClickable(submit));
+        submit.click();
+
+        wait.until(ExpectedConditions.titleIs("Login: Mercury Tours"));
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.linkText("Home"))).click();
+        wait.until(ExpectedConditions.titleIs("Welcome: Mercury Tours"));
+
+        //Check that tour Tips are displayed
+        js.executeScript("window.scrollBy(0, 956)", "");
+        Boolean Display=wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("img[src='images/hdr_tips.gif']"))).isDisplayed();
+
+        Boolean state;
+
+        List<WebElement> l= wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//*[contains(text(),'Always \n" +
+                "            carry a travel first aid kit with bandages, antacids, aspirin, bee\n" +
+                "            sting wipes, and other basic necessities.')]")));
+
+        Boolean Display1=l.get(0).isDisplayed();
+
+        if(Display==true && Display1==true)
+            state=true;
+        else
+            state=false;
+
+        assertEquals(true,state);
+    }
+    @Test
+    public void testDestinationHyperlink()
+    {
+        setUpTestEnvironment test4=new setUpTestEnvironment();
+        WebDriver driver=test4.getDriver();
+        WebDriverWait wait=test4.getWait1();
+        JavascriptExecutor js= test4.getJs();
+
+        wait.until(ExpectedConditions.titleIs("Welcome: Mercury Tours"));
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.linkText("Destinations"))).click();
+
+        wait.until(ExpectedConditions.titleIs("Under Construction: Mercury Tours"));
+        String url=driver.getCurrentUrl();
+
+        //Because the moment we return back to home page user is logged out, so I checked if there is a 'SIGN-OFF'
+        //button, because if there is not the user is already sign off.
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.linkText("Home"))).click();
+        wait.until(ExpectedConditions.titleIs("Welcome: Mercury Tours"));
+
+        List<WebElement> elements=wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.linkText("SIGN-OFF")));
+
+        Boolean checkifUserisStillLoggedIn=elements.isEmpty();
+        System.out.println(url);
+        assertEquals(true, checkifUserisStillLoggedIn);
+
+
+        driver.quit();
+
+    }
+
 }

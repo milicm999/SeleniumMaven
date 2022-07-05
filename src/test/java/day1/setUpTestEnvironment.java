@@ -13,6 +13,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.io.File;
 import java.time.Duration;
 
 public class setUpTestEnvironment {
@@ -28,14 +29,11 @@ public class setUpTestEnvironment {
     {
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\milicm\\OneDrive - Comtrade Group\\Desktop\\QA assignment_Marija_Milic\\geckodriver.exe");
         FirefoxProfile profile = new FirefoxProfile();
-//      options=new ChromeOptions();
+        File addblockefile= new File("C://Users/milicm/Downloads/adblock_plus-3.14.xpi");
+        profile.addExtension(addblockefile);
+        profile.setPreference("extensions.adblockplus.currentVersion", "2.4");
         options = new FirefoxOptions();
         options.setProfile(profile);
-//        options.setExperimentalOption("excludeSwitches", "disable-popup-blocking");
-//        capabilities=new DesiredCapabilities();
-//        capabilities.setCapability(FirefoxOptions.FIREFOX_OPTIONS, options);
-
-
         driver=new FirefoxDriver(options);
         js=(JavascriptExecutor)driver;
         wait1 = new WebDriverWait(driver, Duration.ofSeconds(30));

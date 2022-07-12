@@ -37,13 +37,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/milicm/IdeaProjects/springwebapp"
   }
-}</component>
-  <component name="RunManager" selected="TestNG.Testing.testDestinationHyperlink">
+}]]></component>
+  <component name="RunManager" selected="TestNG.Testing">
     <configuration name="SeleniumDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="day1.SeleniumDemo" />
       <module name="SeleniumMaven" />
@@ -130,8 +131,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.Testing.testDestinationHyperlink" />
         <item itemvalue="TestNG.Testing" />
+        <item itemvalue="TestNG.Testing.testDestinationHyperlink" />
         <item itemvalue="TestNG.Testing.testLogInWithNoInfo" />
         <item itemvalue="TestNG.Testing.testRegistrationWithValidInfo" />
         <item itemvalue="Application.SeleniumDemo" />
